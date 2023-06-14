@@ -2,20 +2,21 @@
 
 import editTaskNote from './editTaskNote.js';
 import { trueStatus, falseStatus } from './boolean.js';
+import updateIndex from './updateIndex.js';
 
 let array = JSON.parse(localStorage.getItem('Data')) || [];
 let counter = array.length + 1;
 const list = document.querySelector('#list');
 
-const updateIndex = () => {
-  array.forEach((task, arrayIndex) => {
-    task.index = arrayIndex;
-  });
-};
+// const updateIndex = () => {
+//   array.forEach((task, arrayIndex) => {
+//     task.index = arrayIndex;
+//   });
+// };
 
 const remove = (x) => {
   array = array.filter((task) => task.index !== x);
-  updateIndex();
+  updateIndex(array);
   localStorage.setItem('Data', JSON.stringify(array));
 };
 
@@ -80,5 +81,5 @@ const showList = () => {
 };
 
 export {
-  showList, editTaskNote, remove, array, counter, updateIndex
+  showList, editTaskNote, remove, array, counter,
 };

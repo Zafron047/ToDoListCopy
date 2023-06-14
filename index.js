@@ -1,6 +1,6 @@
 import './style.css';
 import { showList, array, counter } from './modules/showList.js';
-import { clearCompleted } from './modules/boolean';
+import { clearCompleted } from './modules/boolean.js';
 
 const listInput = document.querySelector('#listInput');
 

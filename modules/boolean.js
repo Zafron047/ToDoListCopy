@@ -1,4 +1,4 @@
-import { updateIndex } from './showList.js';
+import updateIndex from './updateIndex.js';
 
 const trueStatus = (task) => {
   task.completed = true;
