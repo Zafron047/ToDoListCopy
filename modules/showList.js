@@ -8,12 +8,6 @@ let array = JSON.parse(localStorage.getItem('Data')) || [];
 let counter = array.length + 1;
 const list = document.querySelector('#list');
 
-// const updateIndex = () => {
-//   array.forEach((task, arrayIndex) => {
-//     task.index = arrayIndex;
-//   });
-// };
-
 const remove = (x) => {
   array = array.filter((task) => task.index !== x);
   updateIndex(array);
